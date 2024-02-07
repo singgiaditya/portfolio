@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/public/assets/logo.png">
+    <title>SinggiDev.</title>
+    <link href="./styles.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-zinc-800">
+    <div class="flex flex-col h-screen">
+
+        <nav class="py-4 md:py-0 px-4 md:px-0 bg-white border-2 border-2 border-black" x-data="{open : false}">
+            <div class="w-full">
+                <div class="flex justify-between">
+                    <a href="index.html" class="font-bold text-lg sm:my-auto  sm:px-4">SinggiDev.</a>
+                    <button @click="open = !open" class="md:hidden my-auto">
+                        <template x-if="!open">
+                            <ion-icon name="menu-outline" size="large"></ion-icon>
+                        </template>
+                        <template x-if="open">
+                            <ion-icon name="close-outline" size="large"></ion-icon>
+                        </template>
+                    </button>
+                    <div class="items-center justify-between h-full hidden md:flex">
+                        <a class="h-full border border-black border-l-2 flex items-center py-4 px-8 hover:bg-amber-400 hover:font-medium cursor-pointer" href="index.html">About Me</a>
+                        <a class="h-full border border-black flex items-center py-4 px-8 hover:bg-amber-400 hover:font-medium cursor-pointer" href="projects.html">Projects</a>
+                        <a class="h-full border border-black flex items-center py-4 px-8 hover:bg-amber-400 hover:font-medium cursor-pointer" href="resume.html">Resume</a>
+                    </div>
+                </div>
+                <div x-show="open" class="my-4 flex flex-col space-y-2 md:hidden">
+                    <a class="h-10 flex items-center border-2 border-black px-2 hover:bg-amber-400 hover:font-medium" href="index.html">About Me</a>
+                    <a class="h-10 flex items-center border-2 border-black px-2 hover:bg-amber-400 hover:font-medium" href="projects.html">Projects</a>
+                    <a class="h-10 flex items-center border-2 border-black px-2 hover:bg-amber-400 hover:font-medium" href="resume.html">Resume</a>
+                </div>
+            </div>
+        </nav>
+    
+        <main class="flex justify-center py-4 sm:my-0">
+            <div class="w-3/4 space-y-2 md:space-y-0 md:w-auto md:grid md:gap-4 md:grid-cols-3 md:grid-rows-3">
+                <div class="bg-white px-2 py-2 rounded-xl md:max-w-80">
+                    <img src="assets/funplay.png" class="rounded-xl" alt="">
+                    <h3 class="font-mono font-semibold mt-2">FunPlay App</h3>
+                    <p class="text-sm font-mono">An App to booking ticket to a fun place like a theme park, haunted house, arcade, or karaoke.</p>
+                    <a href="https://github.com/singgiaditya/funPlay" target="_blank">
+                    <button class="bg-amber-400 mt-2 h-8 w-16 border-2 border-zinc-800 rounded hover:bg-amber-200">Code</button>
+                    </a>
+                </div>
+                <div class="bg-white px-2 py-2 rounded-xl md:max-w-80">
+                    <img src="assets/seleraku.png" class="rounded-xl" alt="">
+                    <h3 class="font-mono font-semibold mt-2">Seleraku App</h3>
+                    <p class="text-sm font-mono">Application to find your favorite food recipe.</p>
+                    <a href="https://github.com/singgiaditya/seleraku" target="_blank">
+                        <button class="bg-amber-400 mt-2 h-8 w-16 border-2 border-zinc-800 rounded hover:bg-amber-200">Code</button>
+                    </a>
+                </div>
+                <div class="bg-white px-2 py-2 rounded-xl md:max-w-80">
+                    <img src="assets/bookshelf.png" class="rounded-xl" alt="">
+                    <h3 class="font-mono font-semibold mt-2">Bookshelf App</h3>
+                    <p class="text-sm font-mono">Website to add, delete, and mark wether the book has been read or not.</p>
+                    <a href="https://github.com/singgiaditya/bookshelf-app" target="_blank">
+                    <button class="bg-amber-400 mt-2 h-8 w-16 border-2 border-zinc-800 rounded hover:bg-amber-200">Code</button>
+                    </a>
+                    <a href="https://bookshelf-app-singgi.netlify.app/" target="_blank">
+                    <button class="bg-amber-400 mt-2 h-8 w-16 border-2 border-zinc-800 rounded hover:bg-amber-200">Demo</button>
+                    </a>
+                </div>
+                <div class="bg-white px-2 py-2 rounded-xl md:max-w-80">
+                    <img src="assets/e-commerce.png" class="rounded-xl" alt="">
+                    <h3 class="font-mono font-semibold mt-2">E-Commerce</h3>
+                    <p class="text-sm font-mono">E-Commerce website build with laravel.</p>
+                    <a href="https://github.com/singgiaditya/e-commerce" target="_blank">
+                        <button class="bg-amber-400 mt-2 h-8 w-16 border-2 border-zinc-800 rounded hover:bg-amber-200">Code</button>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>
+
